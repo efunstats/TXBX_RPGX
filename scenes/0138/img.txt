@@ -1,0 +1,28 @@
+{
+  "pairList": [
+    {
+      "parent": "ex_0001a_r18",
+      "child": "ex_0001b_r18"
+    },
+    {
+      "parent": "ex_0001a_r18",
+      "child": "ex_0001c_r18"
+    },
+    {
+      "parent": "ex_0001a_r18",
+      "child": "ex_0001d_r18"
+    },
+    {
+      "parent": "ex_0001a_r18",
+      "child": "ex_0001e_r18"
+    },
+    {
+      "parent": "ex_0001a_r18",
+      "child": "ex_0001f_r18"
+    },
+    {
+      "parent": "ex_0001a_r18",
+      "child": "ex_0001g_r18"
+    }
+  ]
+}

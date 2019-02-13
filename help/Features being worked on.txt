@@ -1,0 +1,44 @@
+A lot of stuff is being worked on it's just not in the downloadable viewer yet
+because I'm completely rewriting the viewer since the current one was just a
+"make something that actually works" sort of thing.
+This means that all the features I'm working on can't really be ported back since
+the way the viewer works is completely different and I don't want to maintain two
+different viewers.
+
+You can request some features be added if you want them and if they're small enough
+I can quickly hack them in to the current viewer
+
+------------------------------------------------------------------------------------
+
+Features being worked on for full release:
+
+Copy text to clipboard
+Note: The way the viewer processes the scene and javascript security limitations
+makes it so that this is quite difficult to do and would recquire me to rewrite the
+way the scene processes (which I already am) when it is implemented it also may
+only work in manual mode because of javascript security limitations.
+
+
+Easier way to manage favorites
+Note: It was a last minute addition that I thought would be nice to have and I'd improve it later, I just really don't want to mess with any UI stuff in the current
+viewer because it was thrown together in like 5 minutes and will break easily.
+
+
+Tag linking
+Note: Searching cream pie would bring up anything tagged nakadashi
+
+Backlog
+Note: Backlog on the scene clickable text to replay voiced lines, what you'd
+expect from a backlog.
+
+
+Tag editor (probably later)
+Note: View a scene/characters tags and be able to edit them with a nice UI and export the tag list, really just a QoL thing for people that want good tags.
+
+
+Translation assistant for translators (probably later)
+Note: Just something to work on when I'm bored and don't feel like working on the
+viewer. Hopefully it will make the lives of people who want to translate some scenes
+easier.
+
+------------------------------------------------------------------------------------

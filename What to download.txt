@@ -1,0 +1,45 @@
+==========================================
+=================  TABA  =================
+==========================================
+
+Download the Japanese viewer from the pastebin.
+
+Extract the viewer wherever you want.
+
+Download the English Patch from the folder.
+
+Extract the patch in to the Japanese viewer folder and overwrite any files it asks.
+
+Done.
+
+------------------------------------------------------------------------------------
+
+==========================================
+=================  RPGX  =================
+==========================================
+
+New users Download the RPGX VIEWER (LAST UPDATE DATE) folder.
+If there are any patches with a date later than the RPGX folder download them too.
+
+e.g. 
+
+RPGX VIEWER 20180101    RPGX Scene Patch 20180101.7z    RPGX Scene Patch 20180102.7z
+
+You would download "RPGX VIEWER 20180101" and "RPGX Scene Patch 20180102.7z" but not
+"RPGX Scene Patch 20180101.7z"
+
+
+
+
+Old users only need to download the patches they're missing
+Patches are deleted after 3 events so old users may need to download search the RPGX
+folder for scene they're missing if they don't update in ~6 weeks.
+Your latest patch date should be in the title bar of the viewer.
+
+
+
+
+ALSO PLEASE READ THE .TXTS INCLUDED WITH THE VIEWER AS THEY HAVE SOLOUTIONS TO SOME
+COMMON PROBLEMS.
+IF YOU NEED TO ASK IN ONE OF THE THREADS ABOUT A PROBLEM PLEASE REFRESH THE THREAD
+FIRST AND CHECK NOBODY ELSE HAS ALREADY ANSWERED THE QUESTION.

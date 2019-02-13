@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Taimanin RPGX Viewer</title>
+  <link rel="stylesheet" type="text/css" href="data/styles/style.css">
+  <link rel="stylesheet" type="text/css" href="data/styles/animations.css">
+  <script src="data/scripts/dirs.js"></script>
+  <script src="data/scripts/engdirs.js"></script>
+  <script src="data/scripts/prefs.js"></script>
+  <script src="data/scripts/sceneSelect.js"></script>
+  <script src="data/scripts/preloader.js"></script>
+  <script src="data/scripts/loader.js"></script>
+  <script src="data/scripts/scene.js"></script>
+  <script src="data/scripts/search.js"></script>
+  <script src="data/scripts/main.js"></script>
+  <script src="data/scripts/userInput.js"></script>
+  <script src="data/scripts/characterMeta.js"></script>
+  <script src="data/scripts/sceneMeta.js"></script>
+</head>
+<body style="background:#2f2f2f" oncontextmenu="return false;">
+  <div id="body-wrapper">
+    <div id="header">
+      <input type="button" value="Controls" name="head-controls">
+      <input type="button" value="Options" name="head-options">
+      <input type="button" value="Search" name="head-search">
+      <div id="page-select">
+        <div id="prev-page"></div>
+        <input id="page-number" type="text">
+        <div id="next-page"></div>
+      </div>
+      
+    </div>
+    <div id="content">
+      <div id="content-wrap">
+        <div id="scene-select">
+          <div id="scene-select-control"></div>
+          <div id="cg-wrapper">
+          </div>
+        </div>
+        <div id="scene-viewer">
+          <div id="back-images">
+            <div id="scene-background" class="scene-background"></div>
+            <div id="scene-background-alt" class="scene-background"></div>
+            <div id="parent"></div>
+            <div id="overlay"></div>
+          </div>
+          <div id="effect-flash" class="scene-flash"></div>
+          <div id="effect-flash-alt" class="scene-flash"></div>
+          <div id="scene-black"></div>
+          <div id="actors"></div>
+          <div id="scene-options"></div>
+          <div id="text-box">
+            <div id="name-plate" class="scene-text"></div>
+            <div id="text-box-content" class="scene-text"></div>
+          </div>
+        </div>
+        <div id="search">
+          <div class="search-section">
+            <label>Character</label><br/>
+            <input type="text" name="charName">
+          </div>
+          <div class="search-section">
+            <label>Artist</label><br/>
+            <input type="text" name="sceneArtist">
+          </div>
+          <div class="search-section">
+            <label>Female</label><br/>
+            <input type="text" name="femaleTags">
+            <label for="femaleTagsAll">Match All</label><input type="checkbox" name="femaleTagsAll"><br/>
+            <label>Male</label><br/>
+            <input type="text" name="maleTags">
+            <label for="maleTagsAll">Match All</label><input type="checkbox" name="maleTagsAll"><br/>
+            <label>Misc</label><br/>
+            <input type="text" name="miscTags">
+            <label for="miscTagsAll">Match All</label><input type="checkbox" name="miscTagsAll">
+          </div>
+          <div class="search-section">
+            <label for="charOrig">Exclusive Characters Only</label><input type="checkbox" name="charOrig">
+            <label for="charMain">Main Series Characters Only</label><input type="checkbox" name="charMain">
+            <label for="sceneFav">Favorites Only</label><input type="checkbox" name="sceneFav">
+            <label for="sceneEng">English Only</label><input type="checkbox" name="sceneEng"><br/>
+            <input type="button" name="searchCancel" value="Cancel">
+            <input type="button" name="filterReset" value="Reset">
+            <input type="button" name="sceneSearch" value="Search">
+            <span id="search-error">No results</span>
+          </div>
+        </div>
+        <div id="controls">
+          <div class="controls-section">
+            <div class="controls-subhead">
+              Scene Select
+            </div>
+            <div class="controls-content">
+              Left click on a scene to start it.<br/>
+              Right click on a scene to favorite it.<br/>
+              Click the left or right arrows in the top right to change pages.<br/>
+              Click on the page number, type a new page number in to it and press enter to jump to that page.
+            </div>
+          </div>
+          <div class="controls-section">
+            <div class="controls-subhead">
+              Viewer
+            </div>
+            <div class="controls-content">
+              Click or press Space to advance the scene.<br/>
+              Press A or the Auto button at the bottom to enter auto mode.<br/>
+              Hold Left control or press the skip button to enter skip mode.<br/>
+              Press Esc or the Exit button to end the scene.
+            </div>
+          </div>
+          <div class="controls-section">
+            <div class="controls-subhead">
+              Search
+            </div>
+            <div class="controls-content">
+              Press the search button to open the search menu.<br/>
+              Character can be called by multiple names e.g. "Igawa Asagi", "Asagi Igawa" and "Asagi".<br/>
+              Artist can be called by multiple names e.g. "Kagami Hirotaka", "Hirotaka Kagami" and "Kagami".<br/>
+              Enter tags in to the Female, Male and Misc inputs<br/>
+              Tick match all to make the scenes require all of the tags you entered.<br/>
+              Seperate Names Tags and Artists with a comma, e.g. "Asagi", "Sakura"<br/>
+              Tick exclusive characters to only find scenes with characters unique to TABA and Taimanin RPGX.<br/>
+              Tick Main series characters to only find scenes with characters that are featured in other games.<br/>
+              Tick favorites only to only find scenes that are in your favorites.<br/>
+              Tick English only to only find scenes with an English translation.<br/>
+              Press Cancel to go back to the previous menu.<br/>
+              Press Reset to set scene select back to default.<br/>
+              Press Search to start a search, if no results are found you will get an error message.
+            </div>
+          </div>
+          <div class="controls-section">
+            <input type="button" name="controls-close" value="Close">
+          </div>
+        </div>
+        <div id="options">
+          <div id="options-wrap">
+            <div class="option-section option-scene-select">
+              <div class="option-sub-head">
+                Scene Select
+              </div>
+              <div class="option-num">
+                Columns:<input type="number" name="select-columns" min="1" max="25">
+              </div>
+              <div class="option-num">
+                Rows:<input type="number" name="select-rows" min="1" max="25">
+              </div>
+            </div>
+            <div class="option-section option-sound">
+              <div class="option-sub-head">
+                Audio
+              </div>
+              <div class="option-range">
+                <label class="range-label">BGM</label>
+                <!-- <input class="radio-true range-radio-true" type="radio" name="audio-bgm-radio" value="true" checked>
+                <input class="radio-false range-radio-false" type="radio" name="audio-bgm-radio" value="false"> -->
+                <input class="range-option" type="range" name="audio-bgm-range" min="0" max="100">
+                <input class="range-number" type="number" name="audio-bgm-number" min="0" max="100">
+              </div>
+              <div class="option-range">
+                <label class="range-label">SE</label>
+                <!-- <input class="radio-true range-radio-true" type="radio" name="audio-se-radio" value="true" checked>
+                <input class="radio-false range-radio-false" type="radio" name="audio-se-radio" value="false"> -->
+                <input class="range-option" type="range" name="audio-se-range" min="0" max="100">
+                <input class="range-number" type="number" name="audio-se-number" min="0" max="100">
+              </div>
+              <div class="option-range">
+                <label class="range-label">Voice</label>
+                <!-- <input class="radio-true range-radio-true" type="radio" name="audio-voice-radio" value="true" checked>
+                <input class="radio-false range-radio-false" type="radio" name="audio-voice-radio" value="false"> -->
+                <input class="range-option" type="range" name="audio-voice-range" min="0" max="100">
+                <input class="range-number" type="number" name="audio-voice-number" min="0" max="100">
+              </div>
+            </div>
+            <div class="option-section option-scene-viewer">
+              <div class="option-sub-head">
+                Scene Viewer
+              </div>
+              <div id="scene-radio-options">
+                <div class="option-radio">
+                  <label class="radio-label">English Scripts</label>
+                  <input class="radio-true" type="radio" name="scene-eng" value="true"><input class="radio-false" type="radio" name="scene-eng" value="false" checked>
+                </div>
+                <div class="option-radio">
+                  <label class="radio-label">Skip Animations</label>
+                  <input class="radio-true" type="radio" name="scene-skip-anim" value="true"><input class="radio-false" type="radio" name="scene-skip-anim" value="false" checked>
+                </div>
+                <div class="option-radio">
+                  <label class="radio-label">Text Box Under</label>
+                  <input class="radio-true" type="radio" name="scene-text-box-under" value="true"><input class="radio-false" type="radio" name="scene-text-box-under" value="false" checked>
+                </div>
+                <div class="option-radio">
+                  <label class="radio-label">Cut voice</label>
+                  <input class="radio-true" type="radio" name="scene-cut-voice" value="true"><input class="radio-false" type="radio" name="scene-cut-voice" value="false" checked>
+                </div>
+              </div>
+              <div class="option-scene-viewer-auto">
+                <div class="option-sub-head">
+                  Auto Mode
+                </div>
+                <div class="option-radio">
+                  <label class="radio-label">Wait for Voice</label>
+                  <input class="radio-true" type="radio" name="scene-auto-voice" value="true"><input class="radio-false" type="radio" name="scene-auto-voice" value="false" checked>
+                </div>
+                <div class="option-radio">
+                  <label class="radio-label">Start in Auto</label>
+                  <input class="radio-true" type="radio" name="scene-start-auto" value="true"><input class="radio-false" type="radio" name="scene-start-auto" value="false" checked>
+                </div>
+                <div class="option-num">
+                  CPS
+                  <input type="number" name="scene-auto-cps" min="1" max="100">
+                </div>
+              </div>
+            </div>
+            <div class="option-section option-button-wrap">
+              <input id="option-cancel" class="option-button" type="button" value="Cancel">
+              <input id="option-reset" class="option-button" type="button" value="Reset">
+              <input id="option-save" class="option-button" type="button" value="Save">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <input type="button" name="foot-exit" value="Exit">
+      <input type="button" name="foot-skip" value="Skip">
+      <input type="button" name="foot-auto" value="Auto">
+    </div>
+  </div>
+  <div id="preload-perm-elem">
+  </div>
+  <div id ="preload-temp-elem">
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+### Report a problem
+
+While on the viewer press F12 and switch to the console tab.
+
+If the Console Window is full Filter out warnings.
+Firefox: Press the filter button next to "Filter Output" in the top left and press
+the "Warnings" button
+Chrome: Top middle to the right of the "Filter" text box click on Default Levels and
+untick Warnings
+
+If the console is scrollable, scroll to the top.
+
+Take a screenshot of the console
+
+Post what's wrong and a screenshot of your console in the thread, reply to the last
+post that the viewer was posted in if possible.
+
+------------------------------------------------------------------------------------
+
+### Common problems
+
+Problem: CORS policy: Cross Origin requests are only supported for protocol schemes:
+http, data, chrome, chrome-extension, https.
+Soloution: Read How to open in Chrome.txt
+Note: This possibly applies to all webkit browsers, if the .txt doesn't help post in
+the thread.

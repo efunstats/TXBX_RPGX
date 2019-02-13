@@ -1,0 +1,31 @@
+### SETUP
+
+Create a shortcut to Chrome
+
+Right click, Properties
+
+Add to the end of Target:
+--allow-file-access-from-files
+
+Your Target: should now look like this
+"C:\Path to your chrome install\chrome.exe" --allow-file-access-from-files
+
+Click OK
+
+------------------------------------------------------------------------------------
+
+### Running the Viewer
+
+Close Chrome and make sure it has closed completely in task manager
+
+Open chrome from the shortcut you created
+
+Drag Taimanin RPGX Viewer.html in to Chrome
+
+------------------------------------------------------------------------------------
+
+### Optional
+You can also add the file to the shortcut to open it automatically.
+
+To do this change the Target: of the shortcut to
+"C:\Path to your chrome install\chrome.exe" "C:\Path to Viewer\Taimanin RPGX Viewer.html" --allow-file-access-from-files
