@@ -491,6 +491,14 @@ function runSceneCommands(){
 			case "PAUSE":
 				scenePaused = true;
 				canEmptyTextBox = true;
+				if(prefs.copyText){
+					let tempText = document.createElement('textarea');
+					tempText.value = sceneTextBoxText.innerText;
+					document.body.appendChild(tempText);
+					tempText.select();
+					document.execCommand('copy');
+					document.body.removeChild(tempText);
+				}
 				if(sceneMode === 1){
 					//Auto Mode
 					sceneAutoMode();

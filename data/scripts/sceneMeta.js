@@ -118,6 +118,9 @@ const SHIGA_ASATSUKI_ID = "059";
 const TENKA_ID = "060";
 const YULYA_ID = "061";
 const LARKSHASHA_ID = "062";
+const CLEAR_LOBEL_ID = "063";
+const JINGAI_NO_ORYOU_ID = "064";
+const MIRIAM_ID = "065";
 
 
 sceneMeta = {
@@ -1422,7 +1425,72 @@ sceneMeta = {
 		"ignoredCharacterTags":[],
 		"artistOverwrite":"",
 	},
-
+	"0088_1":{
+		"characterID":CLEAR_LOBEL_ID,
+		"characterForm":"base",
+		"sceneTags":{
+			"female":["handjob", "bukkake"],
+			"male":[],
+			"misc":[],
+		},
+		"ignoredCharacterTags":[],
+		"artistOverwrite":"",
+	},
+	"0088_2":{
+		"characterID":CLEAR_LOBEL_ID,
+		"characterForm":"base",
+		"sceneTags":{
+			"female":["kissing", "nakadashi"],
+			"male":[],
+			"misc":[],
+		},
+		"ignoredCharacterTags":[],
+		"artistOverwrite":"",
+	},
+	"0089_1":{
+		"characterID":KOUSAKA_SHIZURU_ID,
+		"characterForm":"taimanin",
+		"sceneTags":{
+			"female":["fingering"],
+			"male":[],
+			"misc":[],
+		},
+		"ignoredCharacterTags":[],
+		"artistOverwrite":"",
+	},
+	"0089_2":{
+		"characterID":KOUSAKA_SHIZURU_ID,
+		"characterForm":"taimanin",
+		"sceneTags":{
+			"female":["bunny girl", "bukkake"],
+			"male":[],
+			"misc":[],
+		},
+		"ignoredCharacterTags":[],
+		"artistOverwrite":"",
+	},
+	"0090":{
+		"characterID":JINGAI_NO_ORYOU_ID,
+		"characterForm":"demon",
+		"sceneTags":{
+			"female":["machine", "sex toys", "electric shocks"],
+			"male":[],
+			"misc":[],
+		},
+		"ignoredCharacterTags":[],
+		"artistOverwrite":"",
+	},
+	"0091":{
+		"characterID":MIRIAM_ID,
+		"characterForm":"demon",
+		"sceneTags":{
+			"female":["nakadashi", "unusual pupils"],
+			"male":[],
+			"misc":[],
+		},
+		"ignoredCharacterTags":[],
+		"artistOverwrite":"",
+	},
 
 	"0138":{
 		"characterID":IGAWA_ASAGI_ID,

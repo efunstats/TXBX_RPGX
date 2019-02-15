@@ -21,6 +21,7 @@ prefs = {
 	sceneStartAuto: false,
 	favorites: [],
 	engScripts: true,
+	copyText: false,
 }
 
 function initPreferences(){
@@ -43,6 +44,7 @@ function initPreferences(){
 	// optsVoiceUnmuted = document.getElementsByName("audio-bgm-radio")[0];
 	optsAutoWaitVoice = document.getElementsByName("scene-auto-voice")[0];
 	optsCutVoice = document.getElementsByName("scene-cut-voice")[0];
+	optsCopyText = document.getElementsByName("copy-text")[0];
 	optsAutoCPS = document.getElementsByName("scene-auto-cps")[0];
 	optsStartAuto = document.getElementsByName("scene-start-auto")[0];
 	optsSave = document.getElementById("option-save");
@@ -81,6 +83,7 @@ function loadPreferences(){
 	prefs.voiceMuted = localStorage.getItem("voiceMuted")!==null ? fromLocalStorage("voiceMuted") : false;
 	prefs.sceneAutoWaitVoice = localStorage.getItem("sceneAutoWaitVoice")!==null ? fromLocalStorage("sceneAutoWaitVoice") : true;
 	prefs.sceneCutVoice = localStorage.getItem("sceneCutVoice")!==null ? fromLocalStorage("sceneCutVoice") : false;
+	prefs.copyText = localStorage.getItem("copyText")!==null ? fromLocalStorage("copyText") : false;
 	prefs.sceneAutoCPS = localStorage.getItem("sceneAutoCPS")!==null ? fromLocalStorage("sceneAutoCPS") : 12;
 	prefs.sceneStartAuto = localStorage.getItem("sceneStartAuto")!==null ? fromLocalStorage("sceneStartAuto") : false;
 	prefs.favorites = localStorage.getItem("favorites")!==null ? fromLocalStorage("favorites") : [];
@@ -148,6 +151,11 @@ function setOptionValues(){
 		optsCutVoice.checked = true;
 	} else {
 		document.getElementsByName("scene-cut-voice")[1].checked = true;
+	}
+	if(prefs.copyText){
+		optsCopyText.checked = true;
+	} else {
+		document.getElementsByName("copy-text")[1].checked = true;
 	}
 	if(prefs.sceneStartAuto){
 		optsStartAuto.checked = true;
@@ -273,6 +281,7 @@ function defaultPreferences(){
 	prefs.sceneAutoCPS = 12;
 	prefs.sceneStartAuto = false;
 	prefs.engScripts = false;
+	prefs.copyText = false;
 	setOptionValues();
 	savePreferences();
 }
@@ -281,16 +290,17 @@ function savePreferences(){
 	prefs.columns = Number(optsColumns.value) > 0 ? Number(optsColumns.value) : prefs.columns;
 	prefs.rows = Number(optsRows.value) > 0 ? Number(optsRows.value) : prefs.rows;
 	prefs.engScripts = optsEngScripts.checked;
-	prefs.skipAnimations = optsSkipAnim.checked
-	prefs.textBoxUnder = optsTextBoxUnder.checked
-	prefs.bgmVolume = optsBgmRange.value
-	prefs.seVolume = optsSeRange.value
-	prefs.voiceVolume = optsVoiceRange.value
-	// prefs.bgmMuted = optsBgmMuted.checked
-	// prefs.seMuted = optsSeMuted.checked
-	// prefs.voiceMuted = optsVoiceMuted.checked
-	prefs.sceneAutoWaitVoice = optsAutoWaitVoice.checked
-	prefs.sceneCutVoice = optsCutVoice.checked
+	prefs.skipAnimations = optsSkipAnim.checked;
+	prefs.textBoxUnder = optsTextBoxUnder.checked;
+	prefs.bgmVolume = optsBgmRange.value;
+	prefs.seVolume = optsSeRange.value;
+	prefs.voiceVolume = optsVoiceRange.value;
+	// prefs.bgmMuted = optsBgmMuted.checked;
+	// prefs.seMuted = optsSeMuted.checked;
+	// prefs.voiceMuted = optsVoiceMuted.checked;
+	prefs.sceneAutoWaitVoice = optsAutoWaitVoice.checked;
+	prefs.sceneCutVoice = optsCutVoice.checked;
+	prefs.copyText = optsCopyText.checked;
 	prefs.sceneAutoCPS = Number(optsAutoCPS.value) > 0 ? Number(optsAutoCPS.value) : prefs.sceneAutoCPS;
 	prefs.sceneStartAuto = optsStartAuto.checked;
 
@@ -311,6 +321,7 @@ function savePreferences(){
 	toLocalStorage("voiceMuted", prefs.voiceMuted);
 	toLocalStorage("sceneAutoWaitVoice", prefs.sceneAutoWaitVoice);
 	toLocalStorage("sceneCutVoice", prefs.sceneCutVoice);
+	toLocalStorage("copyText", prefs.copyText);
 	toLocalStorage("sceneAutoCPS", prefs.sceneAutoCPS);
 	toLocalStorage("sceneStartAuto", prefs.sceneStartAuto);
 }

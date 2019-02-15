@@ -63,7 +63,9 @@ const FEI_ID = ["Fei"];
 const HIEN_ID = ["Hien"];
 const SIAN_ID = ["Sian"];
 const DEKOSEN_TAKUJI_ID = ["Dekosen Takuji", "Dekosen", "Takuji", "デコセン タクジ", "デコセン", "タクジ"];
-const KOKONOKI_NAO_ID = ["Kokonoki Nao", "Kokonoki", "Nao", "ここのき 奈緒", "ここのき", "奈緒"]
+const KOKONOKI_NAO_ID = ["Kokonoki Nao", "Kokonoki", "Nao", "ここのき 奈緒", "ここのき", "奈緒"];
+const NAMANIKUATK_ID = ["NamanikuATK", "なまにくATK", "Namaniku Attakai", "Namaniku", "Attakai"];
+const KOMETSUBU_ID = ["Kometsubu", "Cometub", "こめつぶ"];
 
 characterMeta = {
 	"001":{
@@ -692,5 +694,34 @@ characterMeta = {
 	},
 	"originalCharacter":true,
 	"artist":KOKONOKI_NAO_ID,
+	},
+	"063":{
+	"name":["Clear Lobel", "Clear", "クリア・ローベル"],
+	"gender":"female",
+	"tags": {
+		"base":["small breasts"],
+	},
+	"originalCharacter":true,
+	"artist":NAMANIKUATK_ID,
+	},
+	"064":{
+	"name":["Jingai no Oryou", "Oryou", "人外のお諒"],
+	"gender":"female",
+	"tags": {
+		"base":["big breasts"],
+		"demon":[],
+	},
+	"originalCharacter":true,
+	"artist":KOMETSUBU_ID,
+	},
+	"065":{
+	"name":["Miriam", "ミリアム"],
+	"gender":"female",
+	"tags": {
+		"base":["huge breasts"],
+		"demon":[],
+	},
+	"originalCharacter":true,
+	"artist":ASAHI_ID,
 	},
 }
